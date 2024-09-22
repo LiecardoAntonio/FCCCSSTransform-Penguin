@@ -58,6 +58,10 @@ body {
   z-index: 4;
 }
 
+.penguin * {
+  position: absolute;
+}
+
 .penguin-head {
   width: 50%;
   height: 45%;
@@ -70,6 +74,9 @@ body {
   border-top-right-radius: 70%;
   border-bottom-left-radius: 65%;
   border-bottom-right-radius: 65%;  
+  top: 10%;
+  left: 25%;
+  z-index: 1;
 }
 
 .penguin-body {
@@ -82,6 +89,20 @@ body {
     white 67%
   );
   border-radius: 80% 80% 100% 100%; /*border-radius shorthand*/
+  top: 40%;
+  left: 23.5%;
+}
+
+.penguin-body::before{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: gray;
+  top: 10%;
+  left: 25%;
+  border-radius: 0% 0% 100% 100%; /*top-left top-right, bottom-right, bottom-left */
+  opacity: 70%; /*manipulate the element's transparency*/
 }
 
 .ground {
